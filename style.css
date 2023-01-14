@@ -1,6 +1,9 @@
 /* *{
     border: 2px solid red;
 } */
+body{
+    margin: 0px;
+}
 .container{
     display: grid;
     height: 100vh;
@@ -8,6 +11,7 @@
     grid-template-rows: 1fr 4fr;
     overflow: scroll;
     font-family: sans-serif;
+    overflow: scroll;
 }
 .header{
     grid-column: 2 / 3;
@@ -30,7 +34,7 @@
 .sidebar{
     grid-row: 1 / 3;
     display: grid;
-    grid-template-rows: 0.8fr 3fr 2fr 2fr;
+    grid-template-rows: 0.8fr 2.5fr 2fr 2fr;
     background-color: #3b82f6;
     color: white;
 }
@@ -58,7 +62,7 @@
     grid-row: 1 / 3;
     display: grid;
     grid-template-rows:1fr 12fr ;
-    overflow: scroll;
+    /* overflow: scroll; */
 }
 .announcements,.trends{
     display: flex;
@@ -109,16 +113,18 @@
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    gap: 10px;
 }
 .button-group button{
     background-color: #3b82f6;
-    height: 40%;
-    width: 20%;
+    height: calc(10px + 3vh);
+    width: calc(30px + 3vw);
     color: white;
     border-radius: 9999px;
     border-width: 0px;
     font-size: calc(2px + 1vw);
     font-weight: 900;
+    padding: 3px;
 }
 .username,.greet{
     display: flex;
@@ -126,13 +132,14 @@
 }
 .greet{
     font-weight: bold;
+    font-size: calc(3px + 1vw);
 }
 .username{
-    font-size: calc(20px + 1vw);
+    font-size: calc(10px + 2vw);
     font-weight: bolder;
 }
-#top-uname{
-    font-size: calc(10px + 1vw);
+.profile-bar #top-uname{
+    font-size: calc(1px + 2vw);
 }
 .sidebar div{
     padding-left: 15px;
@@ -140,18 +147,56 @@
 .dashboard{
     display: flex;
     align-items: center;
+    font-size: calc(10px + 2vw);
+    gap: 10px;
+    margin-right: 10px;
+    font-weight: bold;
 }
 .search-box input{
     width: 90%;
     border-radius: 9999px;
-    height: 30%;
+    height: 40%;
     border: 0px;
     box-shadow: none;
     background-color: #e5e7eb;
     border-color: white;
     padding-left: 3%;
 }
+.search-box input:focus{
+    background-color: white;
+}
 .project-title,.announce-title,.trend-title{
     font-size: calc(10px + 1vw);
     font-weight: 600;
+}
+.sidebar .nav .nav-items{
+    display: flex;
+    align-items: center;
+    gap:10px;
+    /* padding-left: 0px; */
+    font-size: calc(5px + 1vw);
+    font-weight: bold;
+}
+.nav{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.search-icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.controls{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.control-items{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    padding-left: 0px;
+    font-size: calc(5px + 1vw);
+    font-weight: bold;
 }
