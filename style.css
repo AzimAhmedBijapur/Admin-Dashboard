@@ -15,8 +15,7 @@ body{
 }
 .header{
     grid-column: 2 / 3;
-    /* padding: 20px; */
-    height: 200px;
+    height: 300px;
     display: flex;
     flex-direction: column;
 }
@@ -35,6 +34,7 @@ body{
     grid-row: 1 / 3;
     display: grid;
     grid-template-rows: 0.8fr 2.5fr 2fr 2fr;
+    gap: 10px;
     background-color: #3b82f6;
     color: white;
 }
@@ -48,8 +48,7 @@ body{
 }
 .projects{
     display: grid;
-    /* grid-template-columns: repeat(auto-fit,minmax(250px,1fr)); */
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(auto-fit,minmax(400px,1fr));
     gap: 20px;
     padding: 20px;
 }
@@ -62,7 +61,6 @@ body{
     grid-row: 1 / 3;
     display: grid;
     grid-template-rows:1fr 12fr ;
-    /* overflow: scroll; */
 }
 .announcements,.trends{
     display: flex;
@@ -93,17 +91,51 @@ body{
 }
 .cards{
     background-color: white;
+    height: calc(100px + 10vw);
     box-shadow: inset 0.5rem 0rem gold;
+    display: flex;
+    flex-direction: column;
+    padding: 10px 20px;
+}
+.card-content{
+    flex: 3;
+    display: flex;
+    font-size: calc(2px + 1vw);
+    text-align: justify;
+}
+.card-title{
+    flex: 1;
+    display: flex;
+    font-size: calc(10px + 1vw);
+    font-weight: bolder;
+    padding: 20px 0px;
+}
+.card-buttons{
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+    padding: 10px 10px;
+}
+.card-buttons img{
+    height: calc(10px + 1vw);
 }
 .acc-profile{
     display: grid;
-    padding: 4px;
     grid-template-columns: 0.5fr 2fr 1fr;
+}
+.greet,.username{
+    padding-left: 10px;
 }
 .profile-pic-bottom,.profile-pic{
     display: flex;
     align-items: center;
     justify-content: center;
+}
+.profile-pic-bottom img{
+    height: calc(72px + 2vw);
+}
+.profile-pic img{
+    height: calc(40px + 2vw);
 }
 .acc-info{
     display: flex;
@@ -117,18 +149,26 @@ body{
 }
 .button-group button{
     background-color: #3b82f6;
-    height: calc(10px + 3vh);
-    width: calc(30px + 3vw);
+    height: calc(15px + 3vh);
+    width: calc(35px + 3vw);
     color: white;
     border-radius: 9999px;
     border-width: 0px;
-    font-size: calc(2px + 1vw);
+    font-size: calc(1px + 1vw);
     font-weight: 900;
     padding: 3px;
 }
 .username,.greet{
     display: flex;
     align-items: center;
+}
+.alert{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.alert img{
+    height: calc(20px + 2vw);
 }
 .greet{
     font-weight: bold;
@@ -139,7 +179,7 @@ body{
     font-weight: bolder;
 }
 .profile-bar #top-uname{
-    font-size: calc(1px + 2vw);
+    font-size: calc(1px + 1.5vw);
 }
 .sidebar div{
     padding-left: 15px;
@@ -186,6 +226,10 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 20% 20%;
+}
+.search-icon img{
+    height: calc(20px + 2vw);
 }
 .controls{
     display: flex;
@@ -200,3 +244,55 @@ body{
     font-size: calc(5px + 1vw);
     font-weight: bold;
 }
+.control-items img,.nav-items img{
+    height: calc(10px + 2vw);
+}
+.dashboard img{
+    height: calc(25px + 2vw);
+}
+
+@media only screen and (max-width:1200px){
+    .projects{
+        grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+    }
+    
+}
+@media only screen and (max-width:1000px){
+    .projects{
+        grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+    }
+    
+}
+/* 
+@media only screen and (max-width:700px){
+
+    .main{
+        display: flex;
+        padding: 0px;
+        flex-direction: column-reverse;
+    }
+    .announcements,.trends{
+        display: block;
+    }
+    .announce,.trend-items {
+        margin: 0 auto;
+        white-space: nowrap;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        height: 30px;
+    }
+    
+    .announce span {
+        display: inline-block;
+        translate: translateX(100%);
+        animation: my-announce 15s linear infinite;
+    }
+
+    @keyframes my-announce {
+        
+        from { transform: translateX(100%); }
+        to { transform: translateX(-100%); }
+      }
+    
+} */
