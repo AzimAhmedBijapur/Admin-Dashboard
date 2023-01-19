@@ -137,8 +137,14 @@ body{
 .profile-pic-bottom img{
     height: calc(40px + 2vw);
 }
+.profile-pic-bottom img:hover{
+    transform: scale(1.1);
+}
 .profile-pic img{
-    height: calc(40px + 2vw);
+    height: calc(30px + 2vw);
+}
+.profile-pic img:hover{
+    transform: scale(1.1);
 }
 .acc-info{
     margin-top: auto;
@@ -169,6 +175,9 @@ body{
     justify-content: center;
     align-items: center;
 }
+.alert img:hover{
+    transform: scale(1.1);
+}
 .alert img{
     height: calc(20px + 2vw);
 }
@@ -197,12 +206,13 @@ body{
 .search-box input{
     width: 95%;
     border-radius: 9999px;
-    height: 25%;
+    height: 30%;
     border: 0px;
     box-shadow: none;
     background-color: #e5e7eb;
     border-color: white;
     padding-left: 3%;
+    font-size: calc(7px + 1vw);
 }
 .search-box input:focus{
     background-color: white;
@@ -228,7 +238,10 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 20% 20%;
+    border-radius: 9999px;
+}
+.search-icon:hover{
+    background-color: rgb(212, 207, 207,0.2);
 }
 .menu-icon{
     margin-top: auto;
@@ -295,18 +308,23 @@ body{
     flex-direction: column;
     justify-content: center;
 }
-@media only screen and (max-width:1200px){
-    .projects{
-        grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
-    }
-    
+.cards:hover{
+    box-shadow: 5px 5px 5px grey;
+    transform: scale(1.01);
 }
-@media only screen and (max-width:1000px){
-    .projects{
-        grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
-    }
+button:hover{
+    transform: scale(1.1);
 }
-@media only screen and (max-width:680px){
+.card-buttons img:hover{
+    border-radius: 9999px;
+    background-color: rgb(211, 211, 211,0.5);
+}
+.trending-user:hover{
+    background-color: rgb(211, 211, 211,0.5);
+    border-radius: 5px;
+}
+
+@media only screen and (max-width:795px){
     .sidebar{
         display: none;
     }
@@ -317,7 +335,7 @@ body{
         visibility: visible;
     }
 }
-@media only screen and (max-width:460px){
+@media only screen and (max-width:570px){
 
     .main{
         display: flex;
@@ -334,15 +352,28 @@ body{
         margin-right: auto;
     }
     .projects{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
         padding-left: 0px;
         padding-right: 0px;
-        width: 70%;
         margin-left: auto;
         margin-right: auto;
+        
     }
     .project-title,.announce-title,.trend-title{
         display: flex;
         justify-content: center;
         padding-left: 0px;
+    }
+    .cards{
+        width: 70%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .project-title{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
     }
 }
