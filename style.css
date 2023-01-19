@@ -109,7 +109,7 @@ body{
 .card-title{
     /* flex: 1; */
     display: flex;
-    font-size: calc(10px + 1vw);
+    font-size: calc(7px + 1vw);
     font-weight: bolder;
     /* padding: 20px 0px; */
 }
@@ -276,7 +276,7 @@ body{
     height: calc(25px + 2vw);
 }
 .title-ann{
-    font-size: calc(10px + 1vw);
+    font-size: calc(7px + 1vw);
     font-weight: bold;
 }
 .content-ann{
