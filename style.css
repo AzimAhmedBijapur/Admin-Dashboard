@@ -111,7 +111,6 @@ body{
     display: flex;
     font-size: calc(7px + 1vw);
     font-weight: bolder;
-    /* padding: 20px 0px; */
 }
 .card-buttons{
     display: flex;
@@ -225,7 +224,6 @@ body{
     display: flex;
     align-items: center;
     gap:10px;
-    /* padding-left: 0px; */
     font-size: calc(5px + 1vw);
     font-weight: bold;
 }
